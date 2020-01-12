@@ -1,25 +1,28 @@
 import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import { GlobalStyle, theme} from 'composable-dashboard';
+import { ThemeProvider } from 'styled-components'
+import { BrowserRouter, Switch, Route } from 'react-router-dom';
+import Navbar from './components/navbar/Navbar';
+import PetTable from './components/PetTable/PetTable';
+import Dashboard from './components/Dashboard';
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <ThemeProvider theme={theme}>
+      <GlobalStyle/>
+        <BrowserRouter>
+          <Navbar />
+          <Switch>
+            <Route exact path="/">
+              <PetTable />
+            </Route>
+              
+            <Route path="/student">
+              <Dashboard/>
+            </Route>
+          </Switch>
+        </BrowserRouter>
+    </ThemeProvider>
   );
 }
 
