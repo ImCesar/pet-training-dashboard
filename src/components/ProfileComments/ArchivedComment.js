@@ -1,9 +1,10 @@
 import React from 'react';
 import { Message, theme } from 'composable-dashboard';
-import ArchiveIcon from '@material-ui/icons/Archive';
+import DeleteForeverIcon from '@material-ui/icons/DeleteForever';
+import UnarchiveIcon from '@material-ui/icons/Unarchive';
 import { MessageContainer } from './style';
 
-export default ({ addToArchive, children }) => {
+export default ({ deleteComment, restoreComment, children }) => {
   return (
       <Message 
         backgroundColor={theme.color.background} 
@@ -11,8 +12,14 @@ export default ({ addToArchive, children }) => {
       >
         <MessageContainer>
           {children}
-          <ArchiveIcon 
-            onClick={addToArchive}
+
+          <UnarchiveIcon
+            onClick={restoreComment}
+            style={{ opacity: "0.6", fontSize: "20px" }} 
+          />
+
+          <DeleteForeverIcon
+            onClick={deleteComment}
             style={{ opacity: "0.6", fontSize: "20px" }} 
           />
         </MessageContainer>

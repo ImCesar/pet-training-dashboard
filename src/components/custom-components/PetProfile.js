@@ -15,8 +15,14 @@ const PetProfile = ({ customer }) => {
               </EnrollmentStatus> 
           </CardTitle>
           <CardBody>
-            <ProfileDetails customer={customer} imageSrc={customer.profileImage} />
-            <ProfileComments comments={customer.comments} />
+            <ProfileDetails 
+              customer={customer} 
+              imageSrc={customer.profileImage} 
+            />
+            <ProfileComments 
+              initComments={customer.comments} 
+              initArchivedComments={customer.initArchivedComments} 
+            />
           </CardBody>
         </CardShell>
       }

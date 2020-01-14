@@ -11,5 +11,6 @@ export const Nav = styled('nav')`
   display: flex;
   justify-content: center;
   padding: 2rem;
+  margin-bottom: 1.6rem;
   background-color: ${props => props.theme.color.main};
 `;

@@ -7,10 +7,9 @@ import { FlexContainer } from './style';
 export default () => {
   const location = useLocation();
 
-  console.log(location);
-
   return (
     <FlexContainer>
+      <CustomerProfile customer={location.state} imageSrc={location.state.profileImage} />
       <PetProfile customer={location.state} />
       <Inbox />
     </FlexContainer>

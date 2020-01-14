@@ -12,7 +12,10 @@ export const customers = [
     profileImage: pug,
     enrollment: "Enrolled",
     comments: [
-      "What an angel"
+      {
+        id: "0",
+        text: "What an angel"
+      }
     ],
     archivedComments: [],
     inboxMessages: []
@@ -28,7 +31,14 @@ export const customers = [
     profileImage: pug,
     enrollment: "Enrolled",
     comments: [
-      "Thinks she's bigger than she is"
+      {
+        id: "0",
+        text: "Thinks she's bigger than she is"
+      },
+      {
+        id: "1",
+        text: "Beats up fluffy"
+      }
     ],
     archivedComments: [],
     inboxMessages: []
@@ -44,10 +54,10 @@ export const customers = [
     profileImage: pug,
     enrollment: "Expelled",
     comments: [
-      "Inability to be around other pets", 
-      "Prone to attacking staff", 
-      "Opened what seemed to be dimension to another world",
-      "Don't let this cat back into the facility"
+      { id: "0", text: "Inability to be around other pets" }, 
+      { id: "1", text: "Prone to attacking staff" }, 
+      { id: "2", text: "Opened what seemed to be dimension to another world. 2 Staff members missing" },
+      { id: "3", text: "Don't let this cat back into the facility"}
     ],
     archivedComments: [],
     inboxMessages: []
@@ -63,8 +73,8 @@ export const customers = [
     profileImage: pug,
     enrollment: "Enrolled",
     comments: [
-      "Never see her",
-      "Does she actually attend? Who cares charge them anyways"
+      { id: "0", text: "Never see her" },
+      { id: "1", text: "Does she actually attend? Who cares charge them anyways" }
     ],
     archivedComments: [],
     inboxMessages: []

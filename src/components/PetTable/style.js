@@ -3,7 +3,6 @@ import styled from 'styled-components';
 export const StudentCardContainer = styled('div')` 
   display: flex;
   justify-content: center;
-  margin-top: 1.6rem;
 `;
 
 export const Table = styled('table')`

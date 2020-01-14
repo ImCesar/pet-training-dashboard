@@ -4,7 +4,7 @@ import { H1, Nav } from './style';
 export default () => {
   return (
     <Nav>
-      <H1>Furry Obediance</H1>
+      <H1>Academy of Fine Pets</H1>
     </Nav>
   )
 }

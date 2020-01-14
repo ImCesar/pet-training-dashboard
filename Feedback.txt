@@ -1,0 +1,13 @@
+Hey Cesar,
+First draft of the site is looking good, but there are some changes we would like to see to suit our needs.
+
+- Instead of inbox could the title be "Student's Parent"
+- For the Customer Profile we would like a couple of changes
+  - Change title Student Profile
+  - Add enrollment status next to title (i.e. enrolling, enrolled, expelled)
+  - Change details to include age, sex, and nickname. Get rid of username and email since animals can't use computers (Teaching your pets to use the computer is beyond the scope of this work trade)
+  - Add the ability to leave comments about the pet on their profile. Also allow those messages to be archived for a history
+
+After those are done we should be good to go
+
+Thanks!
