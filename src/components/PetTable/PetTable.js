@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from 'react';
+import React from 'react';
 import { Card, ProfileImage } from 'composable-dashboard';
 import {
   Table, 
@@ -8,24 +8,15 @@ import {
   DataRow,
   StudentCardContainer
 } from './style';
-import fetchCustomers from '../../utilities/fetchCustomers';
 import { useHistory } from 'react-router-dom';
+import { useCustomers } from '../../hooks/useCustomers/useCustomers';
 
 export default () => {
-  const [customers, setCustomers] = useState([]);
+  const { customers } = useCustomers();
   const history = useHistory();
 
-  useEffect(() => {
-    const getCustomers = async () => {
-      const customerResp = await fetchCustomers();
-      setCustomers(customerResp);
-    };
-
-    getCustomers();
-  }, []);
-
-  const handleDoubleClick = customer => () => {
-    history.push({ pathname: '/student', state: customer });
+  const handleDoubleClick = customerId => () => {
+    history.push({ pathname: '/student', state: { customerId }});
   };
 
   return (
@@ -43,7 +34,7 @@ export default () => {
           </thead>
           <tbody>
             {customers && customers.map(customer => (
-                <DataRow key={customer.id} onDoubleClick={handleDoubleClick(customer)}>
+                <DataRow key={customer.id} onDoubleClick={handleDoubleClick(customer.id)}>
                   <TableData textAlign="center">
                     <ProfileImage src={customer.profileImage} />
                   </TableData>

@@ -1,7 +1,8 @@
 import React from 'react';
-import { CardShell, CardTitle, CardBody, ProfileDetails } from 'composable-dashboard';
+import { CardShell, CardTitle, CardBody } from 'composable-dashboard';
 import { EnrollmentStatus } from '../EnrollmentStatus';
 import ProfileComments from '../ProfileComments/ProfileComments';
+import StudentDetails from '../student-details/StudentDetails';
 
 const PetProfile = ({ customer }) => {
   return (
@@ -15,10 +16,11 @@ const PetProfile = ({ customer }) => {
               </EnrollmentStatus> 
           </CardTitle>
           <CardBody>
-            <ProfileDetails 
+            <StudentDetails customer={customer} />
+            {/* <ProfileDetails 
               customer={customer} 
               imageSrc={customer.profileImage} 
-            />
+            /> */}
             <ProfileComments 
               initComments={customer.comments} 
               initArchivedComments={customer.initArchivedComments} 

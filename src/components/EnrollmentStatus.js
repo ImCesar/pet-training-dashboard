@@ -6,6 +6,8 @@ const enrollmentColor = status => {
       return "green";
     case "Expelled":
       return "red";
+    case "Enrolling":
+      return "purple";
     default:
       return "grey";
   };
