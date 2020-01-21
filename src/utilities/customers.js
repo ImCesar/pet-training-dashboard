@@ -1,4 +1,7 @@
-import pug from '../assets/pug.jpg'
+import fluffy from './assets/fluffy.jpg';
+import mikasa from './assets/mikasa.jpg';
+import peanut from './assets/peanut.jpg';
+import eevee from './assets/eevee.jpg';
 
 export const customers = [
   { 
@@ -9,7 +12,7 @@ export const customers = [
     age: "6",
     owner: "Cesar Avitia",
     joinDate: new Date(), 
-    profileImage: pug,
+    profileImage: fluffy,
     enrollment: "Enrolled",
     comments: [
       {
@@ -28,7 +31,7 @@ export const customers = [
     sex: "female",
     owner: "Cesar Avitia",
     joinDate: new Date(), 
-    profileImage: pug,
+    profileImage: mikasa,
     enrollment: "Enrolled",
     comments: [
       {
@@ -51,7 +54,7 @@ export const customers = [
     age: "4",
     owner: "Cesar Avitia",
     joinDate: new Date(), 
-    profileImage: pug,
+    profileImage: peanut,
     enrollment: "Expelled",
     comments: [
       { id: "0", text: "Inability to be around other pets" }, 
@@ -70,7 +73,7 @@ export const customers = [
     age: "2",
     owner: "Cesar Avitia",
     joinDate: new Date(), 
-    profileImage: pug,
+    profileImage: eevee,
     enrollment: "Enrolled",
     comments: [
       { id: "0", text: "Never see her" },
