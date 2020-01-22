@@ -17,6 +17,7 @@ export const EnrollmentStatus = styled.div`
   display: flex;
   align-items: center;
   margin-left: 0.8rem;
+  margin-right: 0.8rem;
   font-size: 1.4rem;
   width: fit-content;
   height: fit-content;
