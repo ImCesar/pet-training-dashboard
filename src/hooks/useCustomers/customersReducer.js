@@ -1,6 +1,6 @@
 export default (state, action) => {
   switch (action.type) {
-    case "initCustomersState" : {
+    case "initCustomersState": {
       return { ...state, customers: action.customers };
     }
     case "updateCustomer": {
@@ -15,4 +15,4 @@ export default (state, action) => {
       return state;
     }
   }
-}
+};

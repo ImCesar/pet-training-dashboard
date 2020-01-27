@@ -1,32 +1,33 @@
-import styled from 'styled-components';
+import styled from "styled-components";
 
-export const StudentCardContainer = styled('div')` 
+export const StudentCardContainer = styled("div")`
   display: flex;
   justify-content: center;
 `;
 
-export const Table = styled('table')`
+export const Table = styled("table")`
   font-size: 1.4rem;
-  width: 60vw; 
+  width: 60vw;
   border-collapse: collapse;
 `;
 
-export const TableHeaders = styled('tr')`
+export const TableHeaders = styled("tr")`
   width: 100%;
 `;
 
-export const TableHead = styled('th')`
+export const TableHead = styled("th")`
   text-align: left;
   font-size: 1.6rem;
-  border-bottom: ${props => props.noBorder ? 0 : '1px'} solid ${props => props.theme.color.accent};
+  border-bottom: ${props => (props.noBorder ? 0 : "1px")} solid
+    ${props => props.theme.color.accent};
 `;
 
-export const TableData = styled('td')` 
+export const TableData = styled("td")`
   text-align: ${props => props.textAlign || "left"};
-  width: 10vw; 
+  width: 10vw;
 `;
 
-export const DataRow = styled('tr')` 
+export const DataRow = styled("tr")`
   padding-right: 2rem;
   & img {
     margin: 0;

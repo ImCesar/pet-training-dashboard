@@ -1,7 +1,7 @@
-import styled from 'styled-components';
+import styled from "styled-components";
 
 const enrollmentColor = status => {
-  switch(status) {
+  switch (status) {
     case "Enrolled":
       return "green";
     case "Expelled":
@@ -10,10 +10,10 @@ const enrollmentColor = status => {
       return "purple";
     default:
       return "grey";
-  };
+  }
 };
 
-export const EnrollmentStatus = styled.div` 
+export const EnrollmentStatus = styled.div`
   display: flex;
   align-items: center;
   margin-left: 0.8rem;

@@ -1,6 +1,9 @@
-import { useMessages } from 'composable-dashboard';
+import { useMessages } from "composable-dashboard";
 
-export const useArchivableComments = (initComments = [], initArchivedComments = []) => {
+export const useArchivableComments = (
+  initComments = [],
+  initArchivedComments = []
+) => {
   const comments = useMessages(initComments);
   const archivedComments = useMessages(initArchivedComments);
 

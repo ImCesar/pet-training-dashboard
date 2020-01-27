@@ -1,23 +1,21 @@
-import React from 'react';
-import { CustomerProfile, Inbox } from 'composable-dashboard';
-import { useLocation } from 'react-router-dom';
-import { FlexContainer } from './style';
-import { useCustomers } from '../hooks/useCustomers/useCustomers';
-import StudentParentInbox from './custom-components/StudentParentInbox';
-import StudentProfile from './custom-components/StudentProfile';
+import React from "react";
+import { CustomerProfile, Inbox } from "composable-dashboard";
+import { useLocation } from "react-router-dom";
+import { FlexContainer } from "./style";
+import { useCustomers } from "../hooks/useCustomers/useCustomers";
 
 export default () => {
-  const { state: { customerId }}= useLocation();
+  const {
+    state: { customerId }
+  } = useLocation();
   const { findCustomerById } = useCustomers();
 
   const customer = findCustomerById(customerId);
 
   return (
     <FlexContainer>
-      <StudentProfile customer={customer} />
-      <CustomerProfile customer={customer} imageSrc={customer.profileImage} /> 
-      {/* <Inbox initMessages={customer.inboxMessages} /> */}
-      <StudentParentInbox initMessage={customer.inboxMessages} />
+      <CustomerProfile customer={customer} imageSrc={customer.profileImage} />
+      <Inbox initMessages={customer.inboxMessages} />
     </FlexContainer>
-  )
-}
+  );
+};

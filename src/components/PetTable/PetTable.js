@@ -1,22 +1,22 @@
-import React from 'react';
-import { Card, ProfileImage } from 'composable-dashboard';
+import React from "react";
+import { Card, ProfileImage } from "composable-dashboard";
 import {
-  Table, 
+  Table,
   TableData,
   TableHead,
   TableHeaders,
   DataRow,
   StudentCardContainer
-} from './style';
-import { useHistory } from 'react-router-dom';
-import { useCustomers } from '../../hooks/useCustomers/useCustomers';
+} from "./style";
+import { useHistory } from "react-router-dom";
+import { useCustomers } from "../../hooks/useCustomers/useCustomers";
 
 export default () => {
   const { customers } = useCustomers();
   const history = useHistory();
 
   const handleDoubleClick = customerId => () => {
-    history.push({ pathname: '/student', state: { customerId }});
+    history.push({ pathname: "/student", state: { customerId } });
   };
 
   return (
@@ -25,7 +25,7 @@ export default () => {
         <Table>
           <thead>
             <TableHeaders>
-              <TableHead noBorder/>
+              <TableHead noBorder />
               <TableHead>Name</TableHead>
               <TableHead>Sex</TableHead>
               <TableHead>Age</TableHead>
@@ -33,8 +33,12 @@ export default () => {
             </TableHeaders>
           </thead>
           <tbody>
-            {customers && customers.map(customer => (
-                <DataRow key={customer.id} onDoubleClick={handleDoubleClick(customer.id)}>
+            {customers &&
+              customers.map(customer => (
+                <DataRow
+                  key={customer.id}
+                  onDoubleClick={handleDoubleClick(customer.id)}
+                >
                   <TableData textAlign="center">
                     <ProfileImage src={customer.profileImage} />
                   </TableData>
@@ -43,9 +47,9 @@ export default () => {
                   <TableData>{customer.age}</TableData>
                   <TableData>{customer.owner}</TableData>
                 </DataRow>
-            ))}
+              ))}
           </tbody>
-        </Table>  
+        </Table>
       </Card>
     </StudentCardContainer>
   );

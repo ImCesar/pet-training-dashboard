@@ -1,5 +1,4 @@
-import React, { useState, useEffect } from 'react';
-
+import React, { useState, useEffect } from "react";
 
 export default ({ initialMessages }) => {
   const [messages, setMessages] = useState(initialMessages);
@@ -10,15 +9,15 @@ export default ({ initialMessages }) => {
 
   return (
     <div className="card-shell">
-      <div className="card-title">
-        Inbox
-      </div>
+      <div className="card-title">Inbox</div>
 
       <div className="card-body">
         <div className="messagebox-container">
           {messages.map(message => (
             <div key={message.id} className="instant-message">
-              <p>{message.sentFrom}-{message.timeStamp}</p>
+              <p>
+                {message.sentFrom}-{message.timeStamp}
+              </p>
               <p>{message.text}</p>
             </div>
           ))}
@@ -30,5 +29,5 @@ export default ({ initialMessages }) => {
         </div>
       </div>
     </div>
-  )
-}
+  );
+};

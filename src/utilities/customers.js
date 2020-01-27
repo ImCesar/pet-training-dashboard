@@ -1,17 +1,17 @@
-import fluffy from './assets/fluffy.jpg';
-import mikasa from './assets/mikasa.jpg';
-import peanut from './assets/peanut.jpg';
-import eevee from './assets/eevee.jpg';
+import fluffy from "./assets/fluffy.jpg";
+import mikasa from "./assets/mikasa.jpg";
+import peanut from "./assets/peanut.jpg";
+import eevee from "./assets/eevee.jpg";
 
 export const customers = [
-  { 
-    id: '0',
-    name: 'Fluffy', 
-    nickname: 'Tripod', 
+  {
+    id: "0",
+    name: "Fluffy",
+    nickname: "Tripod",
     sex: "male",
     age: "6",
     owner: "Cesar Avitia",
-    joinDate: new Date(), 
+    joinDate: new Date(),
     profileImage: fluffy,
     enrollment: "Enrolled",
     comments: [
@@ -23,14 +23,14 @@ export const customers = [
     archivedComments: [],
     inboxMessages: []
   },
-  { 
-    id: '1',
-    name: 'Mikasa', 
-    nickname: 'Titan', 
+  {
+    id: "1",
+    name: "Mikasa",
+    nickname: "Titan",
     age: "0.5",
     sex: "female",
     owner: "Cesar Avitia",
-    joinDate: new Date(), 
+    joinDate: new Date(),
     profileImage: mikasa,
     enrollment: "Enrolled",
     comments: [
@@ -46,40 +46,47 @@ export const customers = [
     archivedComments: [],
     inboxMessages: []
   },
-  { 
+  {
     id: "2",
-    name: 'Peanut', 
-    nickname: 'Lucifer', 
+    name: "Peanut",
+    nickname: "Lucifer",
     sex: "male",
     age: "4",
     owner: "Cesar Avitia",
-    joinDate: new Date(), 
+    joinDate: new Date(),
     profileImage: peanut,
     enrollment: "Expelled",
     comments: [
-      { id: "0", text: "Inability to be around other pets" }, 
-      { id: "1", text: "Prone to attacking staff" }, 
-      { id: "2", text: "Opened what seemed to be dimension to another world. 2 Staff members missing" },
-      { id: "3", text: "Don't let this cat back into the facility"}
+      { id: "0", text: "Inability to be around other pets" },
+      { id: "1", text: "Prone to attacking staff" },
+      {
+        id: "2",
+        text:
+          "Opened what seemed to be dimension to another world. 2 Staff members missing"
+      },
+      { id: "3", text: "Don't let this cat back into the facility" }
     ],
     archivedComments: [],
     inboxMessages: []
   },
-  { 
+  {
     id: "3",
-    name: 'Eevee', 
-    nickname: 'Rose', 
+    name: "Eevee",
+    nickname: "Rose",
     sex: "female",
     age: "2",
     owner: "Cesar Avitia",
-    joinDate: new Date(), 
+    joinDate: new Date(),
     profileImage: eevee,
     enrollment: "Enrolled",
     comments: [
       { id: "0", text: "Never see her" },
-      { id: "1", text: "Does she actually attend? Who cares charge them anyways" }
+      {
+        id: "1",
+        text: "Does she actually attend? Who cares charge them anyways"
+      }
     ],
     archivedComments: [],
     inboxMessages: []
   }
-]
+];

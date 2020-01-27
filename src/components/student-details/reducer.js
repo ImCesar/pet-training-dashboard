@@ -1,25 +1,25 @@
 export default (state, action) => {
   switch (action.type) {
-    case 'initCustomers': {
+    case "initCustomers": {
       return { ...state, ...action.customer };
     }
-    case 'setName': {
+    case "setName": {
       return { ...state, name: action.name };
     }
-    case 'setNickname': {
+    case "setNickname": {
       return { ...state, nickname: action.nickname };
     }
-    case 'setAge': {
+    case "setAge": {
       return { ...state, age: action.age };
     }
-    case 'setSex': {
+    case "setSex": {
       return { ...state, sex: action.sex };
     }
-    case 'setEnrollment': {
+    case "setEnrollment": {
       return { ...state, enrollment: action.enrollment };
     }
     default: {
       return state;
     }
   }
-}
+};

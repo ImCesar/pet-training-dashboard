@@ -5,5 +5,5 @@ export const textToMessage = text => {
     sentFrom: "Cesar Avitia",
     timeStamp: new Date(),
     text
-  }
-}
+  };
+};

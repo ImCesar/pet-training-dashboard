@@ -1,11 +1,11 @@
-import styled from 'styled-components';
+import styled from "styled-components";
 
-export const StudentDetailContainer = styled('div')` 
+export const StudentDetailContainer = styled("div")`
   display: flex;
   flex-direction: column;
 `;
 
-export const ImageTextContainer = styled('div')` 
+export const ImageTextContainer = styled("div")`
   display: flex;
 
   & img {
@@ -13,12 +13,12 @@ export const ImageTextContainer = styled('div')`
   }
 `;
 
-export const ButtonContainer = styled('div')` 
+export const ButtonContainer = styled("div")`
   display: flex;
   justify-content: flex-end;
 `;
 
-export const EditDetailContainer = styled('div')` 
+export const EditDetailContainer = styled("div")`
   & label {
     width: 13rem;
   }
@@ -33,4 +33,4 @@ export const EditDetailContainer = styled('div')`
     margin-bottom: 0.4rem;
     margin-left: 0.5rem;
   }
-`
+`;

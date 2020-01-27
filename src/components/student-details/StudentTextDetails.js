@@ -1,9 +1,11 @@
-import React from 'react';
-import { Field } from 'composable-dashboard';
+import React from "react";
+import { Field } from "composable-dashboard";
 
 export default ({ customer }) => {
-  let formattedDate = customer && customer.joinDate && customer.joinDate.toISOString();
-  formattedDate = formattedDate && formattedDate.slice(0, formattedDate.indexOf("T"));
+  let formattedDate =
+    customer && customer.joinDate && customer.joinDate.toISOString();
+  formattedDate =
+    formattedDate && formattedDate.slice(0, formattedDate.indexOf("T"));
 
   return (
     <div>
@@ -15,5 +17,5 @@ export default ({ customer }) => {
         <p>{formattedDate}</p>
       </Field>
     </div>
-  )
-}
+  );
+};

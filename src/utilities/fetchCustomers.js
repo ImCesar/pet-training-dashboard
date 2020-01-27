@@ -1,5 +1,5 @@
-import { customers } from './customers';
+import { customers } from "./customers";
 
 export default () => {
   return customers;
-}
+};

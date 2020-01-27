@@ -1,27 +1,25 @@
-import React from 'react';
-import { Card, ProfileDetails, CardShell, CardTitle, CardBody } from 'composable-dashboard';
-import { EnrollmentStatus } from '../EnrollmentStatus';
-import StudentDetails from '../student-details/StudentDetails';
-import ProfileComments from '../ProfileComments/ProfileComments';
+import React from "react";
+import { CardShell, CardTitle, CardBody } from "composable-dashboard";
+import { EnrollmentStatus } from "../EnrollmentStatus";
+import StudentDetails from "../student-details/StudentDetails";
+import ProfileComments from "../ProfileComments/ProfileComments";
 
 export default ({ customer }) => {
-
   return (
     <CardShell>
       <CardTitle>
         Student Profile
         <EnrollmentStatus enrollment={customer.enrollment}>
           {customer.enrollment}
-        </EnrollmentStatus> 
+        </EnrollmentStatus>
       </CardTitle>
       <CardBody>
         <StudentDetails customer={customer} />
-        <ProfileComments 
+        <ProfileComments
           initComments={customer.comments}
           initArchivedComments={customer.archivedComments}
         />
       </CardBody>
     </CardShell>
-
-  )
-}
+  );
+};
